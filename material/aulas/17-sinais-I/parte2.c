@@ -8,9 +8,13 @@ int main() {
     pid_t filho;
 
     filho = fork();
+    
+    
     if (filho == 0) {
-        int i = 1/0;
-        printf("Divisão por zero! %d \n", i);
+        printf("meu pid %d \n", getpid());
+        while (1);
+        //int i = 1/0;
+        //printf("Divisão por zero! %d \n", i);
     }
 
     int ws;
